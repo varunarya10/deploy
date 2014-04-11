@@ -1,0 +1,5 @@
+Make script to read nodes.yaml and start appropriate number of nodes
+Dump their details in environment file
+Compile enc_data.yaml
+Copy enc.py, enc_data.yaml and puppet modules to nodes.
+Run puppet

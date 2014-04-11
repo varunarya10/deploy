@@ -1,0 +1,12 @@
+node1:
+  name: inst4476
+  ip: 15.34.23.23
+  uuid: 5f463015-70b3-43a0-bb75-e65caba411ef
+node2:
+  name: inst6363
+  ip: 15.32.23.28
+  uuid: fa93fd8a-a562-432a-a596-84f45b7d19f1
+node3:
+  name: inst13531
+  ip: 12.23.76.112
+  uuid: e14f5530-c4c6-4b8d-a5d8-e01fd5bc67c3

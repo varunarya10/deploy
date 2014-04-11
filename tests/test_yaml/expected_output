@@ -1,0 +1,13 @@
+node1:
+  classes:
+    jiocloud::controller:
+      db: 12.23.76.112
+node2:
+  classes:
+    jiocloud::compute:
+      glance_servers:
+      - 15.34.23.23
+node3:
+  classes:
+  - jiocloud::db
+

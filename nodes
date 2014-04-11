@@ -1,0 +1,8 @@
+node1:
+  classes:
+    rjil::server:
+node2:
+  classes:
+    rjil::server:
+      other_name: "{node1:name}"
+      other_ip: "{node1:ip}"

@@ -1,0 +1,12 @@
+node1:
+  classes:
+    jiocloud::controller:
+      db: "{node3:ip}"
+node2:
+  classes:
+    jiocloud::compute:
+      glance_servers:
+        - "{node1:ip}"
+node3:
+  classes:
+    - jiocloud::db
