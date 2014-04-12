@@ -44,6 +44,8 @@ then
 	exit 1
 fi
 
+export OS_AUTH_URL OS_PASSWORD OS_USERNAME OS_TENANT_NAME OS_REGION_NAME
+
 NAME=foo${RANDOM}
 
 echo "Booting server"
