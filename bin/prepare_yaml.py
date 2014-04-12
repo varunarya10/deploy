@@ -22,6 +22,8 @@ input = yaml.load(open(sys.argv[2], 'r'))
 output = {}
 
 def do_repl(s):
+    if s is None:
+        return
     for r in replacements:
         s = s.replace('{%s}' % (r,), replacements[r])
     return s
