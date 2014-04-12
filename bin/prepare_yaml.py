@@ -39,4 +39,4 @@ def repl(d):
     return d
 
 output = repl(input)
-print yaml.dump(output, default_flow_style=False)
+print yaml.dump(dict([(environment_info[k]['name'], v) for k,v in output.iteritems()]), default_flow_style=False)
