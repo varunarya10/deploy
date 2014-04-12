@@ -48,11 +48,11 @@ export OS_AUTH_URL OS_PASSWORD OS_USERNAME OS_TENANT_NAME OS_REGION_NAME
 
 NAME=foo${RANDOM}
 
-echo "Booting server"
+echo "Booting server" >&2
 boot_output="$(nova boot --image ${IMAGE_ID} --flavor ${FLAVOR_ID} --key_name ${KEYPAIR} --user-data data/userdata ${NAME})"
 uuid="$(echo "${boot_output}" | grep ^..uuid | awk -- '{ print $4 }')"
 
-echo "Waiting for IP to be assigned"
+echo "Waiting for IP to be assigned" >&2
 
 ip=''
 while [ -z "$ip" ]
@@ -68,9 +68,9 @@ do
 	done
 done
 
-echo "IP: ${ip}"
+echo "IP: ${ip}" >&2
 
-echo "Waiting to be able to log in"
+echo "Waiting to be able to log in" >&2
 while ! ssh -o StrictHostKeyChecking=no ubuntu@${ip} true
 do
 	sleep 1
