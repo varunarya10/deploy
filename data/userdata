@@ -2,7 +2,7 @@
 puppet:
   main:
     node_terminus: exec
-    external_nodes = /etc/puppet/enc.py
+    external_nodes: /etc/puppet/enc.py
 
 packages:
  - puppet-common
