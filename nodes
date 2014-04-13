@@ -1,3 +1,5 @@
 node1:
   classes:
     rjil::server:
+    rjil::jiocloud::controller:
+      keystone_db_password: ejVudAlkab5
