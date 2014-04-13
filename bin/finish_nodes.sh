@@ -1,5 +1,5 @@
 #!/bin/bash
-if [ $# -ne 2 ]
+if [ $# -ne 3 ]
 then
     echo "Usage: $0 environment.yaml encdata.yaml puppetdir"
     exit 1
@@ -11,7 +11,7 @@ puppetdir="$3"
 
 for node in $(python -c 'import yaml; d = yaml.load(open("'"${environment}"'", "r")); print " ".join([x["ip"] for x in d.values()])')
 do
-    cd $2
+    cd "${puppetdir}"
 	tar cz . | ssh ubuntu@$node 'rm -rf modules || true; mkdir modules ; cd modules ; tar xz'
     cd -
     scp -r data/enc.py ${encdata} ubuntu@$node:
