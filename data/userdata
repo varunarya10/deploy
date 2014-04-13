@@ -1,3 +1,13 @@
+From nobody Sun Apr 13 21:41:44 2014
+Content-Type: multipart/mixed; boundary="===============2691341174585809000=="
+MIME-Version: 1.0
+
+--===============2691341174585809000==
+MIME-Version: 1.0
+Content-Type: text/cloud-config; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: attachment; filename="data/userdata"
+
 #cloud-config
 puppet:
   main:
@@ -7,3 +17,16 @@ puppet:
 packages:
  - puppet-common
  - python-yaml
+
+--===============2691341174585809000==
+MIME-Version: 1.0
+Content-Type: text/x-shellscript; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+Content-Disposition: attachment; filename="foo.sh"
+
+#!/bin/bash
+
+echo "Done" > /tmp/ccdone.flag
+
+
+--===============2691341174585809000==--

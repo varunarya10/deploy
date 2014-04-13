@@ -71,7 +71,7 @@ done
 echo "IP: ${ip}" >&2
 
 echo "Waiting to be able to log in" >&2
-while ! ssh -o StrictHostKeyChecking=no ubuntu@${ip} true
+while ! ssh -o StrictHostKeyChecking=no ubuntu@${ip} test -f /tmp/ccdone.flag
 do
 	sleep 1
 done
