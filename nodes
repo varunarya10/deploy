@@ -1,5 +1,6 @@
 node1:
   classes:
     rjil::server:
-    rjil::jiocloud::controller:
-      keystone_db_password: ejVudAlkab5
+    rjil::jiocloud::dashboard:
+      keystone_url: https://identity-beta.jiocloud.com/v2.0/
+      secret_key: bc51d3c47b90c8a62521bcab06d0401e
