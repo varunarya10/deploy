@@ -42,12 +42,12 @@ The files you need are:
 There's a lot more work that could be done here. I just wanted get this up here
 quickly so that you can get a rough idea of where this is going.
 
-Quick run through:
+Quick example run through:
 
-bin/spawn_nodes.sh nodes > environment.yaml
+bin/spawn_nodes.sh only-dashboard.yaml > environment.yaml
 rm -rf puppetdir
 bin/prepare_puppet_dir.sh modules puppetdir
-bin/prepare_yaml.py environment.yaml nodes > encdata.yaml
+bin/prepare_yaml.py environment.yaml only-dashboard.yaml > encdata.yaml
 bin/finish_nodes.sh environment.yaml encdata.yaml puppetdir
 
 That should do everything, really.
