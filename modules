@@ -1,4 +1,5 @@
 saz-ssh --version 2.3.3
 https://github.com/JioCloud/puppet-rjil rjil
-puppetlabs-keystone --version 3.0.0
-puppetlabs-horizon --version 3.0.0
+puppetlabs-keystone --version 3.1.0
+puppetlabs-horizon --version 3.1.0
+puppetlabs-apt --version 1.4.2
