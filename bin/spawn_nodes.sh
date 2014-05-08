@@ -5,7 +5,11 @@ then
     exit 1
 fi
 
+waitpids=""
 for node in $(python -c 'import yaml; d = yaml.load(open("'$1'", "r")); print " ".join([x for x in d.keys()])')
 do
 	bin/spawn_node.sh ${node} &
+	waitpids="$waitpids $!"
 done
+
+wait $waitpids
