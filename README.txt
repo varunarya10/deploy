@@ -23,6 +23,11 @@ It consists of a number of tools. Their function and usage syntax is a follows:
     Copies puppet modules and encdata to the nodes and performs a puppet run.
 
 
+  bin/full_deploy.sh <scenario>
+
+    Call all the above scripts.
+
+
 The files you need are:
 
   nodes
@@ -39,15 +44,7 @@ The files you need are:
   deployrc
     Cloud details
 
-There's a lot more work that could be done here. I just wanted get this up here
-quickly so that you can get a rough idea of where this is going.
+A full example is:
+$ bin/full_deploy.sh only-dashboard
 
-Quick example run through:
-
-bin/spawn_nodes.sh only-dashboard.yaml > environment.yaml
-rm -rf puppetdir
-bin/prepare_puppet_dir.sh modules puppetdir
-bin/prepare_yaml.py environment.yaml only-dashboard.yaml > encdata.yaml
-bin/finish_nodes.sh environment.yaml encdata.yaml puppetdir
-
-That should do everything, really.
+That's it. That should deploy a fresh dashboard for you.
